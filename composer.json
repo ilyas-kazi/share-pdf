@@ -1,6 +1,6 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "SharePDF",
+    "name": "ilyas-kazi/sharepdf",
     "type": "project",
     "description": "A shareable PDF file with preview for social media",
     "keywords": ["laravel", "framework", "Share PDF"],
@@ -9,6 +9,7 @@
         "php": "^8.2",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
+        "php-open-source-saver/jwt-auth": "^2.8",
         "wildside/userstamps": "^3.1"
     },
     "require-dev": {
