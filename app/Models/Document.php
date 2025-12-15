@@ -65,4 +65,9 @@ class Document extends Model
     {
         return $this->belongsTo(User::class, 'created_by')->withTrashed();
     }
+
+    public function updatedBy()
+    {
+        return $this->belongsTo(User::class, 'updated_by')->withTrashed();
+    }
 }
