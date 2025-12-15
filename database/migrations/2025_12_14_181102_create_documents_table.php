@@ -14,10 +14,20 @@ return new class extends Migration
         Schema::create('documents', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->unique();
+            $table->string('title');
+            $table->string('description', 1000)->nullable();
             $table->string('original_name');
             $table->string('path');
             $table->string('preview_image')->nullable();
+
+            $table->json('metadata')->nullable();
+                // $table->string('author')->nullable();
+                // $table->integer('total_pages')->default(0);
+                // $table->integer('size_in_kb')->default(0);
+
             $table->integer('download_count')->default(0);
+            $table->dateTime('last_downloaded_at')->nullable();
+
             $table->timestamps();
             $table->userstamps();               // adds created_by, updated_by (nullable)
             $table->userstampSoftDeletes();     // optional, for deleted_by (requires soft deletes)
